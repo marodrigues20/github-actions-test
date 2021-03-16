@@ -5,7 +5,7 @@ jobs:
   node-version:
     strategy:
       matrix:
-        os: [macos, ubuntu-latest, windows-latest]
+        os: [macos-latest, ubuntu-latest, windows-latest]
         node_version: [8,9,10]
       #max-parallel: 2 # Numbers of jobs run in parallel
       #fail-fast: true # If any run fail with any version, the next job will stop.
