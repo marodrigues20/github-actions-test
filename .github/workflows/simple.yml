@@ -5,10 +5,14 @@ on: [pull_request]
 jobs:
   run-shell-command:
     runs-on: ubuntu-latest
+    #timeout-minutes: 360 # It means 6 hours. Max number.
     steps:
       - name: echo a string
         run: echo "Hello World"
+        #continue-on-error: true
+        timeout-minutes: 0
       - name: multiline script
+        #if: faliure() # run this step if the previous failed
         run: |
           node -v
           npm -v
